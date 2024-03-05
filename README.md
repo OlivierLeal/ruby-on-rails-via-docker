@@ -1,24 +1,13 @@
-# README
+Esse é um exemplo de aplicação Rails criada para subir via Container Docker.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Usando a versão do ruby 3.0.2 e o rails 7.1.3 junto ao banco de dados PostgreSql 16,
+serve como modelo para criação de novos projetos para que caso precise já obter 
+facilmente este modelo e já conseguir subir sua aplicação.
 
-Things you may want to cover:
+Dependencias necessarias:
 
-* Ruby version
+Docker Engine - Docker Desktop
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-sdasdasdsa
-* ...
+Após a instalação deve entrar no diretorio e executar o comando "docker compose build && docker compose up -d".
+Ele fará toda a instalação e configuração do container na sua maquina e quando terminar deve subir a aplicação com sucesso,
+para acesso deve ir no navegador e acessar o "localhost:3000".
