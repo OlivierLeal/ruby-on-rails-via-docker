@@ -1,13 +1,6 @@
 version: '1.0.0'
 
 services:
-    redis:
-      image: redis:7
-      ports:
-        - '6379:6379'
-      expose:
-        - '6379'
-
     database:
       image: postgres:16
       environment: 
@@ -18,7 +11,6 @@ services:
         - '5432:5432'
       expose:
         - '5432'
-      
     web:
       build: .
       stdin_open: true
@@ -33,14 +25,3 @@ services:
         - .:/home/app/web
       ports:
         - '3000:3000'
-
-    worker:
-      build:
-        context: .
-        dockerfile: ./worker/Dockerfile
-      environment:
-        TZ: America/Salvador
-      env_file:
-        - ./.env.development
-      volumes: 
-        - .:/home/app/web
