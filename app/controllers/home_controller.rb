@@ -1,4 +1,4 @@
-class HomeController < ApplicationControll:error
+class HomeController < ApplicationController
     def index
         @message = 'Carregado'
     end
