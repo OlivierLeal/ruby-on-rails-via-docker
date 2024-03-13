@@ -3,6 +3,8 @@ version: '1.0.0'
 services:
     database:
       image: postgres:16
+      volumes:
+        - db_data:/var/lib/postgresql/data
       environment: 
         TZ: America/Salvador
         POSTGRES_PASSWORD: postgres
@@ -25,3 +27,5 @@ services:
         - .:/home/app/web
       ports:
         - '3000:3000'
+volumes:
+  db_data:
